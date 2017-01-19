@@ -1,6 +1,6 @@
 import { CSCD01Page } from './app.po';
 
-describe('cscd01 App', function() {
+describe('CSCD01 App', function() {
   let page: CSCD01Page;
 
   beforeEach(() => {
