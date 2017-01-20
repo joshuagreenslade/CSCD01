@@ -1,0 +1,79 @@
+.cover {
+    position: relative;
+    min-height: 800px;
+}
+
+.cover .cover-text {
+    position: relative;
+    z-index: 5;
+}
+
+.cover .cover-text span {
+    color: #f95959;
+}
+
+.cover .cover-text .full-height {
+    display: table;
+    min-height: 800px;
+}
+
+.cover .cover-text .full-height .cover-intro {
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 800px;
+}
+
+.cover .cover-text .cover-text-lead {
+    font-size: 40px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+.cover .cover-text .cover-text-sublead {
+    font-size: 16px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    color: #fff;
+}
+
+.cover .cover-text .btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.cover .cover-text .btn-outline:hover {
+    color: #fff;
+    background: #f95959;
+    border-color: #f95959;
+}
+
+.cover .cover-text .btn-outline:hover,
+.cover .cover-text .btn-outline:focus,
+.cover .cover-text .btn-outline:active {
+    outline: none;
+}
+
+.cover-style-2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    position: relative;
+}
+
+.cover-style-2>.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MembersService } from '../../services/members.service';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  keys: any[];
+  members: {};
+
+  constructor(private __memberService:MembersService) {}
 
   ngOnInit() {
+
+    this.__memberService.getMembers()
+      .subscribe(members => {
+          this.keys = Object.keys(members.members);
+          this.members = members.members;
+        }
+      );
+
+      
   }
 
 }

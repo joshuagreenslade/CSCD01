@@ -6,6 +6,8 @@ import {AboutComponent} from './components/about/about.component';
 import {TeamComponent} from './components/team/team.component';
 import {ProjectComponent} from './components/project/project.component';
 import { MemberComponent } from './components/member/member.component';
+import { DeliverableOneComponent } from './components/deliverables/deliverable-one/deliverable-one.component';
+
 
 
 const appRoutes: Routes = [
@@ -23,12 +25,16 @@ const appRoutes: Routes = [
         component: TeamComponent
     },
     {
-        path: 'team/:name',
+        path: 'team/:id',
         component: MemberComponent
     },
     {
         path: 'project',
         component: ProjectComponent
+    },
+    {
+        path: 'project/one',
+        component: DeliverableOneComponent
     },
 ];
 

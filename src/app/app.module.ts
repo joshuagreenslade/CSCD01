@@ -12,6 +12,7 @@ import { AboutComponent } from './components/about/about.component';
 import { TeamComponent } from './components/team/team.component';
 import { ProjectComponent } from './components/project/project.component';
 import { MemberComponent } from './components/member/member.component';
+import { DeliverableOneComponent } from './components/deliverables/deliverable-one/deliverable-one.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MemberComponent } from './components/member/member.component';
     AboutComponent,
     TeamComponent,
     ProjectComponent,
-    MemberComponent
+    MemberComponent,
+    DeliverableOneComponent
   ],
   imports: [
     BrowserModule,

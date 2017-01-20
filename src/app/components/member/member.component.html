@@ -1,3 +1,12 @@
-<p>
-  member works!
-</p>
+<div *ngIf="member" style="background: #f7f7f7;">
+    <div class="container profile">
+        <div class="row center">
+            <img class="img-responsive profile-image" src="{{member.img}}" alt="">
+            <div class="col-sm-12 info">
+                <h2 class="heading text-center">Meet <span>{{member.name}}</span></h2>
+                <p class="bio">{{member.bio}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
