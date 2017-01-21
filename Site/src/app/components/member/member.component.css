@@ -1,0 +1,26 @@
+.profile {
+    margin-top: 2em;
+    padding: 1em;
+    background: #fff;
+}
+
+.profile-image {
+    margin: auto;
+    max-height: 600px;
+}
+
+.info {
+    margin: auto;
+    margin-top: 5em;
+    padding: 0 5em;
+}
+
+@media screen and (max-width: 768px) {
+    .info {
+        padding: 0 1em;
+    }
+}
+
+.info .heading span {
+    color: #F95959;
+}
