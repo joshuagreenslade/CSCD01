@@ -1,0 +1,94 @@
+31/50
+
+CSC D01 Deliverable #2 Marking Rubric
+
+Overall architecture: _8_ / 15
+
+   _3_ / 5 It is clear to the reader that the team correctly
+           understands the architecture of matplotlib.
+
+   Would have liked to see explanation of architecture into 3 main layers (backend, artist and scripting layers)
+
+   _3_ / 5 A reader, initially unfamiliar with the architecture of
+           matplotlib, has a good overview of matplotlib after reading
+           the report.
+
+    Similar to above.
+
+   _2_ / 5 UML diagrams are correct, clear, and helpful.
+
+   -1 arbitrary arrows used in diagram (doesn't show parent/child relationships)
+   -3 Better diagrams could have been drawn to better illustrate the relationship & interaciton between the core classes/layers
+
+Design Patterns: _10_ / 15
+
+   Pattern 1:  _3_ / 5
+ 
+      The pattern is actually present in the source code: _2_ / 3
+      The diagrams are correct, clear, and helpful: _1_ / 2
+
+      -1 need to see where add_axobserver is actually called (without going into codebase), this is part of the interaction too (of your sequence diagram).
+      -1 Need to explain how this observable is slightly different from the observer pattern that's taught in class (there's a small subtle difference)
+
+   Pattern 2:  _2_ / 5
+ 
+      The pattern is actually present in the source code: _1_ / 3
+      The diagrams are correct, clear, and helpful: _1_ / 2
+
+      -1 diagram doesn't clearly show who can select the strategy.
+      -2 Need to better explain when is the strategy being chosen, who gets to choose this strategy and how the two axis classes are implemented / does things differently.
+
+   Pattern 3:  _5_ / 5
+ 
+      The pattern is actually present in the source code: __ / 3
+      The diagrams are correct, clear, and helpful: __ / 2
+
+
+Presentation and Quality of Writing: _7_ / 10
+  -3 report could have benefited from using code snippets to show how certain things were done. 
+
+6/10
+
+Deliverable 2 - Interview plan
+
+1) Overall Architecture (6 marks)
+
+i)   Ask for a volunteer (V1) -- 2 marks
+
+   Pick an "mpl overall" diagram (or several diagrams) from the team's
+   report and ask V1 to point out the major components and their
+   tasks.
+
+   1 diagram needs detail
+
+i)   Ask for a volunteer (V2) -- 2 marks
+
+  Pick 2 components from the diagram V1 was explaining and ask how they
+  interact with each other.
+
+  1 - Said that axis is uses artist
+
+i)   Ask for a volunteer (V3) -- 2 marks
+
+  Ask to elaborate on something cool about the mpl's design. Don't be
+  satisfied with vague answers like "modular", "easy to extend",
+  etc. They should be talking about specific components, give specific
+  examples.
+
+  1
+
+2) Design Patterns (4 marks)
+
+i)   Ask for a volunteer (V4) -- 2 marks
+
+  Pick one design pattern from the report and ask V4 to show it *in
+  the code* of mpl.
+
+  1 - Talked about CSV & FH, couldn't really explain the DP and what it does though
+
+i)   Ask for a volunteer (V5) -- 2 marks
+
+  Pick another design pattern from the res-port and ask V5 to show it
+  *in the code* of mpl.
+
+  2
