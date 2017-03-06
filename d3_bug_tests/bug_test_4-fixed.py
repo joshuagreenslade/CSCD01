@@ -1,6 +1,4 @@
-#minor ticks are not rotated when formatted
-#want them to be formatted along with the major ticks
-
+#adding the which argument to fig.atuofmt_xdate() makes all the labels on the xais rotate
 
 import datetime
 import matplotlib.pyplot as plt
@@ -21,8 +19,8 @@ ax.xaxis.set_major_locator(DayLocator())
 ax.xaxis.set_minor_locator(HourLocator(arange(0, 25, 6)))
 ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
 ax.xaxis.set_minor_formatter(DateFormatter('%H:%M'))
-
+ax.xaxis.set_tick_params(which='minor', pad=15)
 ax.fmt_xdata = DateFormatter('%Y-%m-%d %H:%M:%S')
-fig.autofmt_xdate()
+fig.autofmt_xdate(which='both')
 
 plt.show()
