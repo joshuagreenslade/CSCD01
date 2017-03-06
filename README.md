@@ -17,3 +17,8 @@ Deliverable 2
 
 
 Deliverable 2 can be found in Deliverable2.pdf
+
+
+Deliverable 3
+
+Anything to do with deliverable 3 can be found in the folder Deliverable3
