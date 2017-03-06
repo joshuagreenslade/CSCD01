@@ -1,5 +1,4 @@
-#should not give error, try removing locator.MAXTICKS
-#set MAXTICKS to none in https://github.com/matplotlib/matplotlib/blob/91261e7646947910e6c8d3f4a44eee774e8e3686/lib/matplotlib/ticker.py
+#should not set artificial MAXTICKS limit
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
