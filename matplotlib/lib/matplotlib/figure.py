@@ -332,9 +332,12 @@ class Figure(Artist):
 
         self.transFigure = BboxTransformTo(self.bbox)
 
-        self.patch = Rectangle(
+        # the figurePatch name is deprecated
+        self.patch = self.figurePatch = Rectangle(
             xy=(0, 0), width=1, height=1,
-            facecolor=facecolor, edgecolor=edgecolor, linewidth=linewidth)
+            facecolor=facecolor, edgecolor=edgecolor,
+            linewidth=linewidth)
+
         self._set_artist_props(self.patch)
         self.patch.set_aa(False)
 
@@ -354,10 +357,6 @@ class Figure(Artist):
         self._axstack = AxesStack()  # track all figure axes and current axes
         self.clf()
         self._cachedRenderer = None
-
-    @cbook.deprecated("2.1", alternative="Figure.patch")
-    def figurePatch(self):
-        return self.patch
 
     # TODO: I'd like to dynamically add the _repr_html_ method
     # to the figure in the right context, but then IPython doesn't
@@ -440,7 +439,9 @@ class Figure(Artist):
         self._tight_parameters = tight if isinstance(tight, dict) else {}
         self.stale = True
 
-    def autofmt_xdate(self, bottom=0.2, rotation=30, ha='right'):
+    def autofmt_xdate(self, bottom=0.2, rotation=30, ha='right', which='major'):
+        #which is passed in initially as major but the user can change it to
+        #both if wanted.
         """
         Date ticklabels often overlap, so it is useful to rotate them
         and right align them.  Also, a common use case is a number of
@@ -457,21 +458,25 @@ class Figure(Artist):
 
         *ha*
             The horizontal alignment of the xticklabels
+
+        *which*
+            The labels to which autofmt_xdate will be applied
         """
         allsubplots = all(hasattr(ax, 'is_last_row') for ax in self.axes)
         if len(self.axes) == 1:
-            for label in self.axes[0].get_xticklabels():
+            #added the argument which to all calls of get_xticklabels
+            for label in self.axes[0].get_xticklabels(which=which):
                 label.set_ha(ha)
                 label.set_rotation(rotation)
         else:
             if allsubplots:
                 for ax in self.get_axes():
                     if ax.is_last_row():
-                        for label in ax.get_xticklabels():
+                        for label in ax.get_xticklabels(which=which):
                             label.set_ha(ha)
                             label.set_rotation(rotation)
                     else:
-                        for label in ax.get_xticklabels():
+                        for label in ax.get_xticklabels(which=which):
                             label.set_visible(False)
                         ax.set_xlabel('')
 
@@ -680,12 +685,15 @@ class Figure(Artist):
         return im
 
     def set_size_inches(self, w, h=None, forward=True):
-        """Set the figure size in inches (1in == 2.54cm)
+        """
+        set_size_inches(w,h, forward=False)
 
-        Usage ::
+        Set the figure size in inches (1in == 2.54cm)
+
+        Usage::
 
              fig.set_size_inches(w,h)  # OR
-             fig.set_size_inches((w,h))
+             fig.set_size_inches((w,h) )
 
         optional kwarg *forward=True* will cause the canvas size to be
         automatically updated; e.g., you can resize the figure window
@@ -1553,7 +1561,7 @@ class Figure(Artist):
                 else:
                     warnings.warn('Requested projection is different from '
                                   'current axis projection, creating new axis '
-                                  'with requested projection.', stacklevel=2)
+                                  'with requested projection.')
 
         # no axes found, so create one which spans the figure
         return self.add_subplot(1, 1, 1, **kwargs)
