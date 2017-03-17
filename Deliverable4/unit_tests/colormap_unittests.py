@@ -112,8 +112,7 @@ def test_copy_modify_save_multiple():
 	plt.savefig("test_copy_modify_save_multiple-original.png")
 	assert_array_equal(cm1._lut, np.load("unchanged.npy"), "test_copy_modify_save_multiple, Original colormap was wrong")
 	plt.cla()
-	plt.plot(1,2)
-	plt.savefig("aaaa.png")
+
 	cm2 = copy.copy(cm1)
 	cm2.set_bad('b')
 	plt.imshow(data,cmap=cm1)
