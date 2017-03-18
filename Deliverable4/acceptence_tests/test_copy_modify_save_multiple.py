@@ -6,7 +6,10 @@ import numpy as np
 
 #test that copying and modifying only modifies the modified colormap and not the original
 #test will create 4 graphs
-#test_copy_modify_save_multiple-original.png and test_copy_modify_save_multiple-unmodified.png and test_copy_modify_save_multiple-unmodified2.png should look identical to original.png
+
+#test_copy_modify_save_multiple-original.png and test_copy_modify_save_multiple-unmodified.png and
+#	test_copy_modify_save_multiple-unmodified2.png should look identical to original.png
+
 #test_copy_modify_save_multiple-modified.png should look identical to modified.png
 
 data = np.ma.masked_array([[1,2,3],[2,3,4]], mask=[[1,0,0],[0,0,0]])
