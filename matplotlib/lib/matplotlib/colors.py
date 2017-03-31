@@ -69,6 +69,7 @@ import numpy as np
 import matplotlib.cbook as cbook
 from ._color_data import BASE_COLORS, TABLEAU_COLORS, CSS4_COLORS, XKCD_COLORS
 
+import copy as cp
 
 class _ColorMapping(dict):
     def __init__(self, mapping):
@@ -436,6 +437,14 @@ class Colormap(object):
         #: the default value for the ``extend`` keyword in the
         #: :class:`matplotlib.colorbar.Colorbar` constructor.
         self.colorbar_extend = False
+
+    def __copy__(self):
+        """
+        Returns
+        -------
+        A complete and detached copy of a Colormap object.
+        """
+        return cp.deepcopy(self)
 
     def __call__(self, X, alpha=None, bytes=False):
         """
