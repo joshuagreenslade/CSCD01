@@ -1,0 +1,41 @@
+36.5/43 85%
+
+Issue descriptions, high-level. (6 marks)
+• Issue 1. (3 marks) 1, could be higher-level
+• Issue 2. (3 marks) 1, could be higher-level
+
+Detailed issue descriptions, including UML diagrams, code traces, implementation plans. (14 marks)
+• Issue 1. (7 marks) 5. good uml, -2 no code trace
+• Issue 2. (7 marks) 7. good uml
+
+Testing (10 marks) 10, good job!
+• Acceptance tests for the selected issue. (5 marks)
+• Unit tests for the selected issue. (5 marks)
+
+• Presentation and Quality of Writing (5 marks) 5
+
+Interview (8 marks) 7.5
+1) Volunteer M1 explains what this feature is, high-level: no
+  diagrams or code involved. Just what it does and why it is
+  useful.
+.5
+2) Volunteer M2 explains the UML diagram.
+1
+3) Volunteer M3 shows parts of the code that will be involved.
+
+4) Volunteer M4 explains unit tests.
+
+5) Volunteer M5 explains customer acceptance tests.
+
+1) Volunteer M1 explains what this feature is, high-level: no
+  diagrams or code involved. Just what it does and why it is
+  useful.
+1
+2) Volunteer M2 explains the UML diagram.
+1
+3) Volunteer M3 shows parts of the code that will be involved.
+1
+4) Volunteer M4 explains unit tests.
+1
+5) Volunteer M5 explains customer acceptance tests.
+1
