@@ -1,0 +1,26 @@
+96/115
+
+Implementation. (50 marks)
+	• Correctness. (30 marks) 30
+	• Quality, maturity, style, documentation of the code. (20 marks). 20 - Simple but works well!
+Testing. (20 marks)
+	• Acceptance testing. (10 marks) 10
+	• Unit testing. (10 marks) 10
+User Guide(s). (5 marks) 4
+Design document. (5 marks) 5
+Evidence of good software development process. (10 marks) 0
+Amount of work done compared with other teams (NOT number of features, but overall contribution).
+(10 marks) 3
+Presentation and Quality of Writing. (5 marks) 5
+
+9/10
+
+1) demo the feature
+Good
+
+2) go through one or two acceptance tests (depending on the total
+  number of features they implemented) -- a new person each time
+-1 for not being able to explain the UAT.
+
+3) go through the user guide(s)
+Good
