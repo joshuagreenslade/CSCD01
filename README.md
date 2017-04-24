@@ -13,10 +13,10 @@ The team tab introduces each team member individually.
 
 The project tab is where each deliverable page will be, for deliverable one it contains the team agreement and the tools we will use throughout the project.
 
+
 Deliverable 2
 
-
-Deliverable 2 can be found in Deliverable2.pdf
+Anything to do with deliverable 2 can be found in the folder Deliverable2
 
 
 Deliverable 3
